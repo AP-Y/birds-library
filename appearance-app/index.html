@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bird Library</title>
+  <link rel = 'stylesheet' href = 'style.css'> <!-- External CSS -->
+  <link rel = 'stylesheet' href = 'https://fonts.googleapis.com/css2?family=KoHo&display=swap'> <!-- Google font -->
+  <meta charset = 'UTF-8'> <!-- Allow emojis -->
+  <link rel = 'icon' href = 'https://images.emojiterra.com/google/android-11/512px/1f426.png'> <!-- Set favicon -->
+  <script src = 'script.js'></script> <!-- External JS -->
+</head>
+
+<body>
+  <h1>Bird Library</h1>
+  <div id = 'input'>
+    <p><b>Search for a bird by:</b></p>
+    <input id = 'nameInput' placeholder = 'Name'></input> <!-- User can type string representing name of bird -->
+    <select id = 'sizeSelect' class = 'pushLeft'> <!-- User can select string representing size of bird -->
+      <option value = '' selected = 'true'>Size</option>
+      <option value = 'small'>Small</option>
+      <option value = 'medium'>Medium</option>
+      <option value = 'large'>Large</option>
+    </select>
+    <select id = 'colorsSelect' class = 'pushLeft' multiple> <!-- User can select multiple strings representing colors of bird -->
+      <option value = '' selected = 'true'>Color</option>
+      <option value = 'black'>Black</option>
+      <option value = 'grey'>Grey</option>
+      <option value = 'white'>White</option>
+      <option value = 'brown'>Brown</option>
+      <option value = 'red'>Red</option>
+      <option value = 'orange'>Orange</option>
+      <option value = 'yellow'>Yellow</option>
+      <option value = 'green'>Green</option>
+      <option value = 'blue'>Blue</option>
+    </select>
+    <button onclick = 'searchBirds(true)' class = 'pushLeft'>Search!</button> <!-- JS searches for birds that matches user's criteria, then displays them (their #image and #overlay with description, #saveLifeBtn, and #saveWishBtn to save bird to lifeList or wishList in #container) in #output; 3C Segment 2 - 3D function call 1 -->
+    <br>
+    <p><b>Or. . .</b></p>
+    <button onclick = 'displayAllBirds()' class = 'pushLeft'>All Birds!</button> <!-- JS displays all birds in birdsLibrary in #output -->
+    <button onclick = 'displayRandomBird(true)' class = 'pushLeft'>Completely Random Bird!</button> <!-- JS displays completely random bird in birdsLibrary in #output -->
+    <button onclick = 'displayRandomBird(false)' class = 'pushLeft'>Random Bird Matches Criteria!</button> <!-- JS shows random bird that matches user's criteria in #output -->
+    <button onclick = 'displayMyBirds(lifeList)' class = 'pushLeft'>Life List!</button> <!-- JS shows birds user saved in lifeList in #output; 3B Segment 2 -->
+    <button onclick = 'displayMyBirds(wishList)' class = 'pushLeft'>Wish List!</button> <!-- JS shows birds user saved in wishList in #output -->
+  </div>
+  <div id = 'output'></div> <!-- JS will append #containers (with #image, #overlay with description, #saveLifeBtn, and #saveWishBtn to save bird to lifeList or wishList) of birds the user wants to display here -->
+</body>
+
+</html>

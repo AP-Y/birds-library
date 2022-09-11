@@ -1,0 +1,98 @@
+body { /* Applies to everything on webpage */
+  background-color: #EDF6F9;
+  text-align: center;
+  font-family: 'KoHo';
+  margin: 0;
+}
+
+h1 {
+  padding: 10px;
+  background-color: #FFDDD2;
+  border-top: 10px solid #2D6A4F;
+  border-bottom: 10px solid #2D6A4F;
+}
+
+input, button {
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'KoHo';
+}
+
+input {
+  background-color: #FFB5A7;
+}
+
+button {
+  background-color: #FEC89A;
+}
+
+button:hover { /* When a <button> is hovered over, change its background-color */
+  background-color: #D9ED92;
+}
+
+select {
+  background-color: #FFB5A7;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'KoHo';
+}
+
+option:nth-child(odd) {  /* Every other <option> in <select> is orange-yellow */
+  background-color: #FEC89A;
+}
+
+#colorsSelect {
+  font-size: 10px;
+  height: 40px;
+}
+
+.pushLeft { /* Shift certain <button> and <input> a bit left, to put space between them */
+  margin-left: 40px;
+}
+
+#container { /* Inside each #container is #image of the bird, #overlay with description, #saveLifeBtn, and #saveWishBtn to allow user to save bird in lifeList or wishList */
+  float: left;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  padding: 3px;
+  position: relative;
+}
+
+#image {
+  width: 250px;
+  height: 250px;
+}
+
+#overlay {
+  position: absolute; /* Puts each #overlay in middle of #container */
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 10px 0 10px 0;
+  background-color: #D9ED9299;
+  opacity: 0; /* The text #overlay is transparent until. . . */
+}
+
+
+#cover:hover ~ #overlay, #overlay:hover { /* #image or #overlay is hovered over */
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.saveLifeBtn {
+  position: absolute; /* Puts each .saveBtn in topleft of #container */
+  left: 10px;
+  top: 10px;
+  background-color: #2D6A4F; /* Use green background-color unless user saves bird; then JS changes to green with the ID of specific .saveLifeBtn */
+}
+
+.saveWishBtn {
+  position: absolute; /* Puts each .saveBtn in topright of #container */
+  right: 10px;
+  top: 10px;
+  background-color: #2D6A4F; /* Use dark green background-color unless user saves bird; then JS changes to green with the ID of specific .saveBtn*/
+}
