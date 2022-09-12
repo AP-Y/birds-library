@@ -1,4 +1,4 @@
-# birds-library
+# Birds Library
 Applications to identify birds based on their appearance and taxonomy
 
 * [Video demonstration of apperance app](https://drive.google.com/file/d/1LVOIeETbiNcEbojGKSF-IzA0kvnHAtAH/view?usp=sharing)
